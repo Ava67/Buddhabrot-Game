@@ -1,5 +1,7 @@
 
 
+
+
 fn main() -> eframe::Result {
     println!("Hello, world!");
 
@@ -7,7 +9,11 @@ fn main() -> eframe::Result {
 	let mut name = "Ava".to_owned();
 	let mut age = 42;
 
-	let options = eframe::NativeOptions::default();
+	let options = eframe::NativeOptions{
+		viewport: egui::ViewportBuilder::default()
+    		.with_inner_size([320.0, 240.0]),
+		..Default::default()
+	};
 
 	eframe::run_simple_native("My eGUI app", options, move |ctx, _frame| {
 		egui::CentralPanel::default().show(ctx, |ui| {
