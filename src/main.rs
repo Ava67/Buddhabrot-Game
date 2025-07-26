@@ -7,6 +7,7 @@ fn main() -> eframe::Result {
 	let mut age = 42;
 	let inner_width = 320.0;
 	let inner_height = 240.0;
+	let num_pixels: u64 = inner_width * inner_height;
 
 	let options = eframe::NativeOptions{
 		viewport: egui::ViewportBuilder::default()
