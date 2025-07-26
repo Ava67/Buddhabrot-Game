@@ -1,17 +1,16 @@
 
-
-
-
 fn main() -> eframe::Result {
     println!("Hello, world!");
 
 	// Our application state:
 	let mut name = "Ava".to_owned();
 	let mut age = 42;
+	let inner_width = 320.0;
+	let inner_height = 240.0;
 
 	let options = eframe::NativeOptions{
 		viewport: egui::ViewportBuilder::default()
-    		.with_inner_size([320.0, 240.0]),
+    		.with_inner_size([inner_width, inner_height]),
 		..Default::default()
 	};
 
